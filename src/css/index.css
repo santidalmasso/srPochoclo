@@ -14,6 +14,7 @@ body{
     display: grid;
     grid-template: 80px 1fr/ 350px 1fr;
     grid-template-areas: "menu header" "menu peliculas";
+    height: 100vh;
 }
 
 /* ---------------------- MENU ----------------------*/
@@ -99,7 +100,7 @@ body{
 }
 
 .formulario{
-    padding: var(--espaciado-normal);
+    padding: var(--espaciado-chico);
 }
 
 .header .formulario input{
@@ -126,4 +127,46 @@ body{
     object-fit: cover;
     vertical-align: middle;
     margin-right: var(--espaciado-chico);
+}
+
+/* ---------------------- PELICULAS ----------------------*/
+
+.section-peliculas{
+    padding: var(--espaciado-chico);
+    overflow: auto;
+}
+
+.pelicula-subtitulo{
+    color: #6c757d;
+    font-size: .8em;
+    font-weight: 300;
+}
+
+.pelicula-categoria-titulo{
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: var(--espaciado-chico);
+}
+
+.peliculas-container{
+    display: flex;
+    height: min-content;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: var(--espaciado-chico);
+}
+
+.pelicula{
+    margin: 0 var(--espaciado-chico) 0 0;
+    cursor: pointer;
+}
+
+.pelicula img{
+    width: 10rem;
+}
+
+.pelicula figcaption{
+    font-size: .9em;
+    margin-top: var(--espaciado-muy-chico);
 }
