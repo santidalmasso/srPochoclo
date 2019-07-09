@@ -12,7 +12,7 @@
 body{
     font-family: var(--fuente-Roboto);
     display: grid;
-    grid-template: 90px 1fr/ 350px 1fr;
+    grid-template: 80px 1fr/ 350px 1fr;
     grid-template-areas: "menu header" "menu peliculas";
 }
 
@@ -86,4 +86,44 @@ body{
 
 .menu-lista li{
     margin: var(--espaciado-chico) 0;
+}
+
+
+/* ---------------------- HEADER ----------------------*/
+
+.header{
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.formulario{
+    padding: var(--espaciado-normal);
+}
+
+.header .formulario input{
+    height: 2.5em;
+    width: 50%;
+    min-width: 280px;
+    font-weight: 300;
+    padding: 0 var(--espaciado-chico);
+    background-color: #f9f9f9;
+    border: none;
+    outline: none;
+    border-radius: var(--espaciado-chico);
+}
+
+.header p{
+    padding: 0 var(--espaciado-normal);
+    margin: 0;
+}
+
+.header img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: var(--espaciado-chico);
 }
