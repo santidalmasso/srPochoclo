@@ -1,0 +1,89 @@
+:root {
+    --espaciado-normal: 1.25em;
+    --espaciado-chico: calc(var(--espaciado-normal)/2);
+    --espaciado-muy-chico: calc(var(--espaciado-normal)/4);
+    --espaciado-grande: calc(var(--espaciado-normal)*1.5);
+    --espaciado-muy-grande: calc(var(--espaciado-normal)*2);
+
+    --fuente-Roboto: 'Roboto', sans-serif;
+}
+
+
+body{
+    font-family: var(--fuente-Roboto);
+    display: grid;
+    grid-template: 90px 1fr/ 350px 1fr;
+    grid-template-areas: "menu header" "menu peliculas";
+}
+
+/* ---------------------- MENU ----------------------*/
+
+.section-menu{
+    grid-area: menu;
+    display: grid;
+    height: 100vh;
+    padding: var(--espaciado-normal);
+    background-color: #0d0d0d;
+    color: white;
+    grid-template-rows: auto 1fr 1fr;
+    box-sizing: border-box;
+    gap: var(--espaciado-normal);
+}
+
+.menu-logo{
+    width: 95%;
+    padding: var(--espaciado-normal) 0;
+    box-sizing: border-box;
+    justify-self: center;
+    align-self: center;
+}
+
+.menu-nuevos{
+    display: grid;
+    overflow: auto;
+    list-style-position: inside;
+}
+
+.menu-nuevos .menu-lista a{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.menu-nuevos .menu-lista a:hover{
+    text-decoration: underline;
+}
+
+.menu-title{
+    margin-top: 0;
+    margin-bottom: var(--espaciado-chico);
+    font-size:1.6em;
+    font-weight: 600;
+}
+
+.menu-amigos{
+    padding: 0;
+    overflow: auto;
+    display: grid;
+    list-style: none;
+}
+
+.menu-amigos span{
+    padding-left: var(--espaciado-chico);
+}
+
+.menu-amigos img{
+    width: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.menu-lista{
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    font-size: .9em;
+}
+
+.menu-lista li{
+    margin: var(--espaciado-chico) 0;
+}
