@@ -118,6 +118,10 @@ body{
     margin: var(--espaciado-chico) 0;
 }
 
+.menu-lista li:hover{
+    cursor: pointer
+}
+
 
 /* ---------------------- HEADER ----------------------*/
 
