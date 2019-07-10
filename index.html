@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="section-menu">
-        <img class="menu-logo" src="src/images/SrPochoclo.png" alt="">
+        <img class="menu-logo" id="menu-logo" src="src/images/SrPochoclo.png" alt="">
         <div class="menu-nuevos">
             <h2 class="menu-title">Nuevos lanzamientos</h2>
             <ol class="menu-lista" id="nuevas-peliculas">
@@ -26,11 +26,11 @@
 
     <header class="header" id="header">
         <form action="" class="formulario" id="form-busqueda">
-            <input type="text" placeholder="Buscar una pelicula" name="peliculas">
+            <input type="text" placeholder="Buscar una pelicula" name="pelicula">
         </form>
     </header>
 
-    <div class="section-peliculas">
+    <div class="section-peliculas" id="section-peliculas">
         <span class="pelicula-subtitulo">Todo tiros y golpes</span>
         <h2 class="pelicula-categoria-titulo">Accion</h2>
         <div class="peliculas-container" id="action-container">
@@ -46,6 +46,16 @@
         <div class="peliculas-container" id="terror-container">
             <img src="src/images/loader.gif" alt="">
         </div>    
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="modal">
+        <h1></h1>
+        <div class="modal-content">
+            <img src="" alt="" width="180px">
+            <p></p>
+        </div>
+        <button class="modal-button" id="hide-modal">Cerrar</button>
     </div>
 
     <script src="src/js/index.js"></script>
