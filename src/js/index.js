@@ -1,6 +1,6 @@
 const load = async() => {
 
-    const API_YTS_URL = 'https://yts.lt/api/v2/list_movies.json'
+    const API_YTS_URL = 'https://yts.mx/api/v2/list_movies.json'
     const API_USERS_URL = 'https://randomuser.me/api/?inc=name,picture&results='
     
     const getData = async (url, string) => {
@@ -138,7 +138,7 @@ const load = async() => {
 
     const user = await getUsers(1)
     renderPerfilTemplate(user.results, $header)
-    const pelisRecientesList = await getData(API_YTS_URL, '?query_term=2019&limit=10')
+    const pelisRecientesList = await getData(API_YTS_URL, `?query_term=${new Date().getFullYear()}&limit=10`)
     renderNewMovies(pelisRecientesList.data.movies ,$nuevasPeliculas)
     const listUsers = await getUsers(10)
     renderFriendsList(listUsers.results, $menuAmigos)
